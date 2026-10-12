@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maîtrise Verbes Irréguliers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1d4ed8;--blue2:#2563eb;--bl:#eff6ff;--bl2:#dbeafe;--green:#16a34a;--gl:#f0fdf4;--gl2:#bbf7d0;--red:#dc2626;--rl:#fef2f2;--rl2:#fecaca;--ink:#0f172a;--mut:#64748b;--line:#e2e8f0;--hh:110px;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:'Nunito',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.5}
+button{font-family:inherit;cursor:pointer}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;max-width:820px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:38px;height:38px;border-radius:10px;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center;font-size:15px;letter-spacing:.5px}
+.bt{font-weight:800;font-size:15px;line-height:1.15;color:var(--blue)}
+.hbtn{border:2px solid var(--blue);background:#fff;color:var(--blue);font-weight:800;border-radius:999px;padding:7px 14px;font-size:14px;white-space:nowrap}
+.hbtn.on{background:var(--blue);color:#fff}
+nav{display:flex;max-width:820px;margin:0 auto;padding:0 8px}
+nav button{flex:1;border:0;background:none;padding:10px 4px;font-weight:700;font-size:14px;color:var(--mut);border-bottom:3px solid transparent}
+nav button.on{color:var(--blue);border-bottom-color:var(--blue)}
+main{max-width:820px;margin:0 auto;padding:16px 16px 48px}
+h1{font-size:24px;line-height:1.2;margin:4px 0 6px;color:var(--blue)}
+h2{font-size:19px;margin:0 0 8px;color:var(--blue)}
+h3{font-size:16px;margin:0 0 6px}
+p{margin:0 0 10px}
+.mut{color:var(--mut)}
+.hero{padding:6px 0 12px}
+.search{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font:inherit;font-size:16px;outline:none}
+.search:focus,input:focus,textarea:focus{border-color:var(--blue2);box-shadow:0 0 0 3px var(--bl2)}
+.letters{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}
+.letters a{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;background:var(--bl);color:var(--blue);font-weight:800;text-decoration:none;font-size:14px}
+.tbl{border:1px solid var(--line);border-radius:12px;overflow:clip}
+.th,.tr{display:grid;grid-template-columns:1fr 1fr 1.05fr 1.5fr;gap:6px;padding:9px 12px;align-items:center;font-size:14px}
+.th{background:var(--blue);color:#fff;font-weight:800;position:sticky;top:calc(var(--hh) + env(safe-area-inset-top,0px) - 2px);z-index:5}
+.tr{border-top:1px solid var(--line)}
+.tr b{color:var(--blue)}
+.tr span:nth-child(3){color:var(--green);font-weight:700}
+.tr .fr{color:var(--mut);display:flex;justify-content:space-between;gap:4px;align-items:center}
+.tr .fr i{font-style:normal;font-size:11px;font-weight:800;background:var(--bl);color:var(--blue);border-radius:6px;padding:1px 6px;white-space:nowrap}
+.lt{background:var(--bl);color:var(--blue);font-weight:800;padding:4px 12px;scroll-margin-top:calc(var(--hh) + 56px)}
+.empty{padding:20px;text-align:center;color:var(--mut)}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;background:#fff}
+.card.go{border-color:var(--blue2);background:var(--bl)}
+.card.wait{border-color:var(--line);background:#f8fafc}
+.card.good{border-color:var(--gl2);background:var(--gl)}
+.card.bad{border-color:var(--rl2);background:var(--rl)}
+.card.ex{border-left:5px solid var(--blue2)}
+.ex q{display:block;font-style:normal;background:var(--bl);border-radius:8px;padding:6px 10px;margin:6px 0;font-weight:600}
+.ex q b{color:var(--green)}
+.wrong{background:var(--rl);color:var(--red);border-radius:8px;padding:6px 10px;margin:4px 0;font-weight:600}
+.right{background:var(--gl);color:var(--green);border-radius:8px;padding:6px 10px;margin:4px 0 10px;font-weight:600}
+.tbl3{width:100%;border-collapse:collapse;font-size:14px}
+.tbl3 th{background:var(--blue);color:#fff;text-align:left;padding:8px 10px}
+.tbl3 td{padding:8px 10px;border-top:1px solid var(--line)}
+.btn{display:inline-block;border:2px solid var(--blue);background:#fff;color:var(--blue);font-weight:800;font-size:16px;border-radius:12px;padding:12px 20px;margin:4px 6px 4px 0}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.green{background:var(--green);border-color:var(--green);color:#fff}
+.btn.ghost{border-color:var(--line);color:var(--mut)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.full{width:100%;margin-right:0}
+.chip{display:inline-block;background:var(--bl);color:var(--blue);font-weight:800;border-radius:999px;padding:3px 11px;font-size:13px;margin:2px 4px 2px 0}
+.bar{height:10px;background:var(--bl);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .3s}
+.bar.b i{background:var(--blue2)}
+.cd{font-size:34px;font-weight:800;color:var(--blue);letter-spacing:1px;margin:6px 0;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(7,1fr)}}
+.tile{border:2px solid var(--line);border-radius:12px;padding:8px 2px;text-align:center;background:#fff;font-weight:800;color:var(--mut);min-height:62px;font-size:13px}
+.tile big{display:block;font-size:20px;line-height:1.1}
+.tile.open{border-color:var(--blue2);color:var(--blue);background:var(--bl)}
+.tile.done{border-color:var(--gl2);background:var(--gl);color:var(--green)}
+.tile.done.low{border-color:var(--rl2);background:var(--rl);color:var(--red)}
+.tile.wait{border-style:dashed}
+.tile:disabled{cursor:default}
+.back{border:0;background:none;color:var(--blue);font-weight:800;font-size:15px;padding:6px 0;margin-bottom:6px}
+.qtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-weight:800;color:var(--blue)}
+.qlabel{color:var(--mut);font-weight:700;font-size:14px;margin:14px 0 6px}
+.prompt{font-size:21px;font-weight:700;line-height:1.35;margin:4px 0 16px}
+.blank{display:inline-block;min-width:70px;border-bottom:3px solid var(--blue2);color:transparent}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;border:2px solid var(--line);background:#fff;border-radius:12px;padding:13px 14px;font-size:17px;font-weight:700;color:var(--ink)}
+.opt b{width:30px;height:30px;border-radius:50%;background:var(--bl);color:var(--blue);display:grid;place-items:center;flex:none;font-size:14px}
+.opt.sel{border-color:var(--blue2);background:var(--bl)}
+.opt.sel b{background:var(--blue2);color:#fff}
+.two{display:grid;gap:12px}
+.two label,.sent label{display:block;font-weight:700;font-size:14px;color:var(--mut)}
+input[type=text],.two input,textarea{width:100%;margin-top:4px;padding:12px;border:2px solid var(--line);border-radius:12px;font:inherit;font-size:17px;outline:none;color:var(--ink)}
+textarea{resize:vertical;min-height:64px}
+.hint{color:var(--red);font-weight:700;min-height:22px;margin:10px 0 0}
+.score{text-align:center;padding:22px 12px}
+.score .n{font-size:58px;font-weight:800;line-height:1}
+.score .n small{font-size:24px;opacity:.7}
+.score.red .n{color:var(--red)}.score.green .n{color:var(--green)}
+.cq{border:1px solid var(--line);border-left:6px solid var(--green);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.cq.ko{border-left-color:var(--red);background:#fffafa}
+.cqh{display:flex;gap:8px;align-items:center;margin-bottom:4px;font-weight:800}
+.cqh .no{color:var(--mut);font-size:13px}
+.cq.ok .mark{color:var(--green)}.cq.ko .mark{color:var(--red)}
+.cen{font-size:17px;font-weight:600}
+.cen .g,.g{color:var(--green)}
+.cfr{color:var(--mut);margin-top:2px}
+.yours{margin-top:8px;color:var(--red);font-weight:700}
+.exp{margin-top:6px;background:var(--bl);color:var(--ink);border-radius:8px;padding:8px 10px;font-size:15px}
+.sent{margin-bottom:14px}
+.sent .vv{font-weight:800;color:var(--blue);margin-bottom:2px}
+.sent .err{color:var(--red);font-weight:700;font-size:14px;margin-top:4px}
+.recap{border:2px solid var(--blue2);border-radius:16px;padding:18px;background:#fff}
+.recap .rh{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.recap .rs{margin:10px 0;padding:10px 12px;background:var(--bl);border-radius:10px}
+.recap .rs b{color:var(--blue)}
+.recap mark{background:var(--gl2);color:#065f2c;border-radius:4px;padding:0 3px}
+.badge{display:inline-block;border-radius:999px;padding:3px 12px;font-weight:800;font-size:14px}
+.badge.green{background:var(--gl);color:var(--green);border:1px solid var(--gl2)}
+.badge.red{background:var(--rl);color:var(--red);border:1px solid var(--rl2)}
+.hist{display:block;width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px;margin-bottom:10px}
+.hist .t{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:800;font-size:17px}
+.cf{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--blue) 0%,var(--green) 100%);color:#fff;border-radius:18px;padding:30px 18px;text-align:center;margin-bottom:16px}
+.cf h2{color:#fff;font-size:34px;margin:0 0 4px}
+.cf p{position:relative;font-size:17px}
+.cf i{position:absolute;top:-16px;width:9px;height:15px;opacity:.9;animation:fall 3.2s linear infinite}
+@keyframes fall{to{transform:translateY(420px) rotate(540deg);opacity:.2}}
+@media(prefers-reduced-motion:reduce){.cf i{animation:none;display:none}}
+.pbars div{margin:8px 0}
+.pbars .row{display:flex;justify-content:space-between;font-size:14px;font-weight:700}
+.bar.r i{background:var(--red)}
+.cenb{text-align:center}
+.note{font-size:13px;color:var(--mut)}
+</style>
+</head>
+<body>
+<header id="hd">
+  <div class="hrow">
+    <div class="brand"><span class="logo">MV</span><span class="bt">Maîtrise<br>Verbes Irréguliers</span></div>
+    <button class="hbtn" id="hist" onclick="openHist()">🕘 Historique</button>
+  </div>
+  <nav>
+    <button data-v="list" onclick="goV('list')">📚 Liste</button>
+    <button data-v="lesson" onclick="goV('lesson')">🎓 Leçon</button>
+    <button data-v="challenge" onclick="goV('challenge')">🏆 Mon Challenge</button>
+  </nav>
+</header>
+<main id="app"></main>
+
+<script>
+/* ============ DONNÉES : base|prétérit|participe|français|complément|présent FR|passé composé FR ============ */
+const RAW=`abide|abode|abode|respecter / demeurer|by the rules|respectent les règles|ont respecté les règles
+arise|arose|arisen|surgir|suddenly|surgissent soudainement|sont surgis soudainement
+awake|awoke|awoken|se réveiller|at six|se réveillent à six heures|se sont réveillés à six heures
+babysit|babysat|babysat|garder (des enfants)|the neighbours' children|gardent les enfants des voisins|ont gardé les enfants des voisins
+be|was/were|been|être|very tired|sont très fatigués|ont été très fatigués
+bear|bore|borne|supporter / porter|the pain|supportent la douleur|ont supporté la douleur
+beat|beat|beaten|battre|their rivals|battent leurs rivaux|ont battu leurs rivaux
+become|became|become|devenir|good friends|deviennent de bons amis|sont devenus de bons amis
+begin|began|begun|commencer|the lesson|commencent la leçon|ont commencé la leçon
+behold|beheld|beheld|apercevoir / contempler|the sunrise|contemplent le lever du soleil|ont contemplé le lever du soleil
+bend|bent|bent|plier|the metal|plient le métal|ont plié le métal
+bet|bet|bet|parier|ten dollars|parient dix dollars|ont parié dix dollars
+bid|bid|bid|enchérir|fifty dollars|enchérissent de cinquante dollars|ont enchéri de cinquante dollars
+bind|bound|bound|lier / relier|the books together|relient les livres ensemble|ont relié les livres ensemble
+bite|bit|bitten|mordre|the apple|mordent la pomme|ont mordu la pomme
+bleed|bled|bled|saigner|a lot|saignent beaucoup|ont beaucoup saigné
+blow|blew|blown|souffler|the candles|soufflent les bougies|ont soufflé les bougies
+break|broke|broken|casser|the window|cassent la fenêtre|ont cassé la fenêtre
+breed|bred|bred|élever (des animaux)|rabbits|élèvent des lapins|ont élevé des lapins
+bring|brought|brought|apporter|some water|apportent de l'eau|ont apporté de l'eau
+broadcast|broadcast|broadcast|diffuser|the news|diffusent les informations|ont diffusé les informations
+build|built|built|construire|a house|construisent une maison|ont construit une maison
+burn|burnt|burnt|brûler|the papers|brûlent les papiers|ont brûlé les papiers
+burst|burst|burst|éclater|into tears|éclatent en larmes|ont éclaté en larmes
+buy|bought|bought|acheter|a new phone|achètent un nouveau téléphone|ont acheté un nouveau téléphone
+cast|cast|cast|jeter / lancer|a net|jettent un filet|ont jeté un filet
+catch|caught|caught|attraper|the ball|attrapent la balle|ont attrapé la balle
+choose|chose|chosen|choisir|a red car|choisissent une voiture rouge|ont choisi une voiture rouge
+cling|clung|clung|s'accrocher|to the rope|s'accrochent à la corde|se sont accrochés à la corde
+come|came|come|venir|from Benin|viennent du Bénin|sont venus du Bénin
+cost|cost|cost|coûter|a lot of money|coûtent beaucoup d'argent|ont coûté beaucoup d'argent
+creep|crept|crept|ramper / se faufiler|into the room|se faufilent dans la pièce|se sont faufilés dans la pièce
+cut|cut|cut|couper|the bread|coupent le pain|ont coupé le pain
+deal|dealt|dealt|traiter (avec)|with the problem|traitent le problème|ont traité le problème
+dig|dug|dug|creuser|a hole|creusent un trou|ont creusé un trou
+do|did|done|faire|their homework|font leurs devoirs|ont fait leurs devoirs
+draw|drew|drawn|dessiner|a picture|dessinent une image|ont dessiné une image
+dream|dreamt|dreamt|rêver|of travelling|rêvent de voyager|ont rêvé de voyager
+drink|drank|drunk|boire|some milk|boivent du lait|ont bu du lait
+drive|drove|driven|conduire|a big truck|conduisent un gros camion|ont conduit un gros camion
+dwell|dwelt|dwelt|habiter / demeurer|in the forest|habitent dans la forêt|ont habité dans la forêt
+eat|ate|eaten|manger|rice and fish|mangent du riz et du poisson|ont mangé du riz et du poisson
+fall|fell|fallen|tomber|from the tree|tombent de l'arbre|sont tombés de l'arbre
+feed|fed|fed|nourrir|the dog|nourrissent le chien|ont nourri le chien
+feel|felt|felt|ressentir|a lot of joy|ressentent beaucoup de joie|ont ressenti beaucoup de joie
+fight|fought|fought|se battre|for justice|se battent pour la justice|se sont battus pour la justice
+find|found|found|trouver|the keys|trouvent les clés|ont trouvé les clés
+fit|fit|fit|aller / tenir (taille)|in the box|tiennent dans la boîte|ont tenu dans la boîte
+flee|fled|fled|s'enfuir / fuir|from danger|fuient le danger|ont fui le danger
+fling|flung|flung|lancer avec force|a stone into the river|lancent une pierre dans la rivière|ont lancé une pierre dans la rivière
+fly|flew|flown|voler (en avion)|to Paris|voyagent en avion jusqu'à Paris|ont voyagé en avion jusqu'à Paris
+forbid|forbade|forbidden|interdire|smoking|interdisent de fumer|ont interdit de fumer
+forecast|forecast|forecast|prévoir (météo)|rain|prévoient de la pluie|ont prévu de la pluie
+foresee|foresaw|foreseen|prévoir|a problem|prévoient un problème|ont prévu un problème
+foretell|foretold|foretold|prédire|the future|prédisent l'avenir|ont prédit l'avenir
+forget|forgot|forgotten|oublier|the password|oublient le mot de passe|ont oublié le mot de passe
+forgive|forgave|forgiven|pardonner|their friend|pardonnent leur ami|ont pardonné leur ami
+forgo|forwent|forgone|renoncer à|their holidays|renoncent à leurs vacances|ont renoncé à leurs vacances
+freeze|froze|frozen|geler|the water|gèlent l'eau|ont gelé l'eau
+get|got|got|obtenir|a good grade|obtiennent une bonne note|ont obtenu une bonne note
+give|gave|given|donner|a gift|donnent un cadeau|ont donné un cadeau
+go|went|gone|aller|to school|vont à l'école|sont allés à l'école
+grind|ground|ground|moudre|the coffee|moulent le café|ont moulu le café
+grow|grew|grown|grandir / cultiver|very fast|grandissent très vite|ont grandi très vite
+hang|hung|hung|accrocher|a picture|accrochent un tableau|ont accroché un tableau
+have|had|had|avoir|a big family|ont une grande famille|ont eu une grande famille
+hear|heard|heard|entendre|a strange noise|entendent un bruit étrange|ont entendu un bruit étrange
+hide|hid|hidden|cacher|the money|cachent l'argent|ont caché l'argent
+hit|hit|hit|frapper|the ball|frappent la balle|ont frappé la balle
+hold|held|held|tenir|my hand|tiennent ma main|ont tenu ma main
+hurt|hurt|hurt|blesser|their feelings|blessent leurs sentiments|ont blessé leurs sentiments
+keep|kept|kept|garder|the secret|gardent le secret|ont gardé le secret
+kneel|knelt|knelt|s'agenouiller|on the floor|s'agenouillent sur le sol|se sont agenouillés sur le sol
+knit|knit|knit|tricoter|a scarf|tricotent une écharpe|ont tricoté une écharpe
+know|knew|known|savoir / connaître|the answer|savent la réponse|ont su la réponse
+lay|laid|laid|poser|the book on the table|posent le livre sur la table|ont posé le livre sur la table
+lead|led|led|mener / diriger|the team|mènent l'équipe|ont mené l'équipe
+lean|leant|leant|se pencher / s'appuyer|on the wall|s'appuient sur le mur|se sont appuyés sur le mur
+leap|leapt|leapt|sauter / bondir|over the fence|sautent par-dessus la clôture|ont sauté par-dessus la clôture
+learn|learnt|learnt|apprendre|English|apprennent l'anglais|ont appris l'anglais
+leave|left|left|partir / quitter|early|partent tôt|sont partis tôt
+lend|lent|lent|prêter|some money|prêtent de l'argent|ont prêté de l'argent
+let|let|let|laisser / permettre|the cat in|laissent entrer le chat|ont laissé entrer le chat
+lie|lay|lain|être allongé|on the bed|sont allongés sur le lit|ont été allongés sur le lit
+light|lit|lit|allumer|a candle|allument une bougie|ont allumé une bougie
+lose|lost|lost|perdre|the match|perdent le match|ont perdu le match
+make|made|made|fabriquer / faire|a cake|préparent un gâteau|ont préparé un gâteau
+mean|meant|meant|signifier / compter pour|a lot to me|comptent beaucoup pour moi|ont beaucoup compté pour moi
+meet|met|met|rencontrer|their teacher|rencontrent leur professeur|ont rencontré leur professeur
+mislay|mislaid|mislaid|égarer|their keys|égarent leurs clés|ont égaré leurs clés
+mislead|misled|misled|tromper / induire en erreur|the customers|trompent les clients|ont trompé les clients
+misread|misread|misread|mal lire|the message|lisent mal le message|ont mal lu le message
+mistake|mistook|mistaken|confondre|one twin for the other|confondent un jumeau avec l'autre|ont confondu un jumeau avec l'autre
+misunderstand|misunderstood|misunderstood|mal comprendre|the question|comprennent mal la question|ont mal compris la question
+offset|offset|offset|compenser|the costs|compensent les coûts|ont compensé les coûts
+outdo|outdid|outdone|surpasser|all the other teams|surpassent toutes les autres équipes|ont surpassé toutes les autres équipes
+outgrow|outgrew|outgrown|devenir trop grand pour|their shoes|deviennent trop grands pour leurs chaussures|sont devenus trop grands pour leurs chaussures
+outrun|outran|outrun|distancer|the other runners|distancent les autres coureurs|ont distancé les autres coureurs
+overcome|overcame|overcome|surmonter|every difficulty|surmontent chaque difficulté|ont surmonté chaque difficulté
+overdo|overdid|overdone|exagérer|the training|exagèrent avec l'entraînement|ont exagéré avec l'entraînement
+overeat|overate|overeaten|trop manger|at lunch|mangent trop au déjeuner|ont trop mangé au déjeuner
+overhear|overheard|overheard|entendre par hasard|their conversation|entendent leur conversation par hasard|ont entendu leur conversation par hasard
+overpay|overpaid|overpaid|trop payer|the repairs|paient trop cher les réparations|ont trop payé les réparations
+override|overrode|overridden|annuler / outrepasser|the decision|annulent la décision|ont annulé la décision
+oversleep|overslept|overslept|dormir trop longtemps|by an hour|dorment une heure de trop|ont dormi une heure de trop
+overtake|overtook|overtaken|dépasser (véhicule)|the bus|dépassent le bus|ont dépassé le bus
+overthrow|overthrew|overthrown|renverser (un régime)|the government|renversent le gouvernement|ont renversé le gouvernement
+pay|paid|paid|payer|the bill|paient la facture|ont payé la facture
+put|put|put|mettre|the book on the desk|mettent le livre sur le bureau|ont mis le livre sur le bureau
+quit|quit|quit|arrêter / quitter|their job|quittent leur travail|ont quitté leur travail
+read|read|read|lire|a short story|lisent une nouvelle|ont lu une nouvelle
+rebuild|rebuilt|rebuilt|reconstruire|the bridge|reconstruisent le pont|ont reconstruit le pont
+redo|redid|redone|refaire|the exercise|refont l'exercice|ont refait l'exercice
+remake|remade|remade|refaire (un film)|the film|refont le film|ont refait le film
+repay|repaid|repaid|rembourser|the loan|remboursent le prêt|ont remboursé le prêt
+resell|resold|resold|revendre|old books|revendent de vieux livres|ont revendu de vieux livres
+reset|reset|reset|réinitialiser|the phone|réinitialisent le téléphone|ont réinitialisé le téléphone
+retake|retook|retaken|repasser (un examen)|the exam|repassent l'examen|ont repassé l'examen
+retell|retold|retold|raconter à nouveau|the story|racontent à nouveau l'histoire|ont raconté à nouveau l'histoire
+rethink|rethought|rethought|repenser|the plan|repensent le plan|ont repensé le plan
+rewind|rewound|rewound|rembobiner|the tape|rembobinent la cassette|ont rembobiné la cassette
+rewrite|rewrote|rewritten|réécrire|the text|réécrivent le texte|ont réécrit le texte
+rid|rid|rid|débarrasser|the house of rats|débarrassent la maison des rats|ont débarrassé la maison des rats
+ride|rode|ridden|monter (cheval, vélo)|a horse|montent un cheval|ont monté un cheval
+ring|rang|rung|sonner|the bell|sonnent la cloche|ont sonné la cloche
+rise|rose|risen|se lever / monter|at dawn|se lèvent à l'aube|se sont levés à l'aube
+run|ran|run|courir|in the park|courent dans le parc|ont couru dans le parc
+say|said|said|dire|the truth|disent la vérité|ont dit la vérité
+see|saw|seen|voir|a rainbow|voient un arc-en-ciel|ont vu un arc-en-ciel
+seek|sought|sought|chercher|help|cherchent de l'aide|ont cherché de l'aide
+sell|sold|sold|vendre|fresh fruit|vendent des fruits frais|ont vendu des fruits frais
+send|sent|sent|envoyer|a message|envoient un message|ont envoyé un message
+set|set|set|mettre / fixer|the table|mettent la table|ont mis la table
+shake|shook|shaken|secouer|the bottle|secouent la bouteille|ont secoué la bouteille
+shed|shed|shed|verser (des larmes)|tears|versent des larmes|ont versé des larmes
+shine|shone|shone|briller|in the sky|brillent dans le ciel|ont brillé dans le ciel
+shoot|shot|shot|tirer|at the target|tirent sur la cible|ont tiré sur la cible
+show|showed|shown|montrer|their photos|montrent leurs photos|ont montré leurs photos
+shrink|shrank|shrunk|rétrécir|in the wash|rétrécissent au lavage|ont rétréci au lavage
+shut|shut|shut|fermer|the door|ferment la porte|ont fermé la porte
+sing|sang|sung|chanter|a beautiful song|chantent une belle chanson|ont chanté une belle chanson
+sink|sank|sunk|couler|to the bottom|coulent au fond|ont coulé au fond
+sit|sat|sat|s'asseoir|on the chair|s'assoient sur la chaise|se sont assis sur la chaise
+sleep|slept|slept|dormir|late|dorment tard|ont dormi tard
+slide|slid|slid|glisser|on the ice|glissent sur la glace|ont glissé sur la glace
+sling|slung|slung|jeter / suspendre|their bags over their shoulders|jettent leurs sacs sur leurs épaules|ont jeté leurs sacs sur leurs épaules
+slit|slit|slit|fendre / entailler|the cloth|fendent le tissu|ont fendu le tissu
+smell|smelt|smelt|sentir|the flowers|sentent les fleurs|ont senti les fleurs
+speak|spoke|spoken|parler|English|parlent anglais|ont parlé anglais
+speed|sped|sped|filer / aller vite|down the road|filent sur la route|ont filé sur la route
+spell|spelt|spelt|épeler|their names|épellent leurs noms|ont épelé leurs noms
+spend|spent|spent|dépenser / passer|a lot of money|dépensent beaucoup d'argent|ont dépensé beaucoup d'argent
+spill|spilt|spilt|renverser|the coffee|renversent le café|ont renversé le café
+spin|spun|spun|faire tourner / filer|the wheel|font tourner la roue|ont fait tourner la roue
+spit|spat|spat|cracher|on the ground|crachent par terre|ont craché par terre
+split|split|split|diviser / fendre|the cake|divisent le gâteau|ont divisé le gâteau
+spoil|spoilt|spoilt|gâcher / gâter|the surprise|gâchent la surprise|ont gâché la surprise
+spread|spread|spread|répandre / étaler|the news|répandent la nouvelle|ont répandu la nouvelle
+spring|sprang|sprung|bondir|out of bed|bondissent hors du lit|ont bondi hors du lit
+stand|stood|stood|se tenir debout|in line|se tiennent en file|se sont tenus en file
+steal|stole|stolen|voler (dérober)|a bicycle|volent un vélo|ont volé un vélo
+stick|stuck|stuck|coller|the stamp|collent le timbre|ont collé le timbre
+sting|stung|stung|piquer|the child|piquent l'enfant|ont piqué l'enfant
+stink|stank|stunk|puer|of fish|puent le poisson|ont pué le poisson
+stride|strode|stridden|marcher à grands pas|across the field|traversent le champ à grands pas|ont traversé le champ à grands pas
+strike|struck|struck|frapper / heurter|the door|frappent la porte|ont frappé la porte
+string|strung|strung|enfiler / suspendre|the beads|enfilent les perles|ont enfilé les perles
+strive|strove|striven|s'efforcer|for success|s'efforcent de réussir|se sont efforcés de réussir
+sublet|sublet|sublet|sous-louer|the flat|sous-louent l'appartement|ont sous-loué l'appartement
+swear|swore|sworn|jurer|to tell the truth|jurent de dire la vérité|ont juré de dire la vérité
+sweep|swept|swept|balayer|the floor|balaient le sol|ont balayé le sol
+swim|swam|swum|nager|in the sea|nagent dans la mer|ont nagé dans la mer
+swing|swung|swung|se balancer|on the swing|se balancent sur la balançoire|se sont balancés sur la balançoire
+take|took|taken|prendre|the bus|prennent le bus|ont pris le bus
+teach|taught|taught|enseigner|mathematics|enseignent les mathématiques|ont enseigné les mathématiques
+tear|tore|torn|déchirer|the paper|déchirent le papier|ont déchiré le papier
+tell|told|told|raconter / dire|a story|racontent une histoire|ont raconté une histoire
+think|thought|thought|penser|about the future|pensent à l'avenir|ont pensé à l'avenir
+throw|threw|thrown|lancer|the ball|lancent la balle|ont lancé la balle
+thrust|thrust|thrust|enfoncer|the stick into the sand|enfoncent le bâton dans le sable|ont enfoncé le bâton dans le sable
+tread|trod|trodden|marcher (sur) / piétiner|on the grass|marchent sur l'herbe|ont marché sur l'herbe
+undercut|undercut|undercut|vendre moins cher que|their competitors|vendent moins cher que leurs concurrents|ont vendu moins cher que leurs concurrents
+undergo|underwent|undergone|subir|a safety check|subissent un contrôle de sécurité|ont subi un contrôle de sécurité
+understand|understood|understood|comprendre|the lesson|comprennent la leçon|ont compris la leçon
+undertake|undertook|undertaken|entreprendre|a long journey|entreprennent un long voyage|ont entrepris un long voyage
+undo|undid|undone|défaire|the knot|défont le nœud|ont défait le nœud
+unwind|unwound|unwound|dérouler|the cable|déroulent le câble|ont déroulé le câble
+uphold|upheld|upheld|faire respecter / maintenir|the law|font respecter la loi|ont fait respecter la loi
+upset|upset|upset|contrarier / bouleverser|their mother|contrarient leur mère|ont contrarié leur mère
+wake|woke|woken|se réveiller|at seven|se réveillent à sept heures|se sont réveillés à sept heures
+wear|wore|worn|porter (vêtement)|a blue shirt|portent une chemise bleue|ont porté une chemise bleue
+weave|wove|woven|tisser / tresser|a basket|tressent un panier|ont tressé un panier
+weep|wept|wept|pleurer|for hours|pleurent pendant des heures|ont pleuré pendant des heures
+wet|wet|wet|mouiller|the towel|mouillent la serviette|ont mouillé la serviette
+win|won|won|gagner|the game|gagnent le match|ont gagné le match
+wind|wound|wound|enrouler|the rope|enroulent la corde|ont enroulé la corde
+withdraw|withdrew|withdrawn|retirer|some cash|retirent de l'argent liquide|ont retiré de l'argent liquide
+withhold|withheld|withheld|retenir / refuser de donner|the information|retiennent l'information|ont retenu l'information
+withstand|withstood|withstood|résister à|the heat|résistent à la chaleur|ont résisté à la chaleur
+wring|wrung|wrung|tordre / essorer|the wet clothes|essorent les vêtements mouillés|ont essoré les vêtements mouillés
+write|wrote|written|écrire|a letter|écrivent une lettre|ont écrit une lettre`;
+const V=RAW.trim().split("\n").map(l=>{const a=l.split("|");return{b:a[0],p:a[1],pp:a[2],fr:a[3],o:a[4],fp:a[5],fpa:a[6]}});
+const TD=Math.ceil(V.length/6); // nombre de jours (6 verbes par jour, le dernier jour peut être plus court)
+const LAST=V.length-(TD-1)*6; // nombre de verbes du dernier jour
+const FINAL=TD+1;
+const PASS=15;
+
+/* ============ UTILITAIRES ============ */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const fmt=n=>(Math.round(n*10)/10).toString().replace(".",",");
+const col=s=>s<PASS?"red":"green";
+const pad=n=>String(n).padStart(2,"0");
+const fmtCd=ms=>{const s=Math.max(0,Math.floor(ms/1000));return pad(Math.floor(s/3600))+":"+pad(Math.floor(s%3600/60))+":"+pad(s%60)};
+const dateFr=t=>new Date(t).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"});
+const timeFr=t=>new Date(t).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+const dayVerbs=n=>V.slice((n-1)*6,n*6);
+const dayTitle=n=>n===FINAL?"Test final":"Jour "+n;
+function nextSix(ts){const d=new Date(ts);const s=new Date(ts);s.setHours(6,0,0,0);if(s<=d)s.setDate(s.getDate()+1);return s.getTime()}
+
+/* ============ STOCKAGE ============ */
+const KEY="mvi_proto_v2";
+let S={done:{},unlock:{}};
+try{const r=localStorage.getItem(KEY);if(r)S=Object.assign(S,JSON.parse(r))}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+
+/* ============ LOGIQUE VERBES ============ */
+const ALTP={abide:["abided"],dwell:["dwelled"],kneel:["kneeled"],knit:["knitted"],lean:["leaned"],leap:["leaped"],spoil:["spoiled"],speed:["speeded"],wet:["wetted"],fit:["fitted"],burn:["burned"],dream:["dreamed"],learn:["learned"],smell:["smelled"],spell:["spelled"],spill:["spilled"],light:["lighted"],hang:["hanged"],bet:["betted"],lie:["lied"]};
+const ALTPP=Object.assign({show:["showed"]},ALTP);
+const ing=b=>b==="be"?"being":/[^e]e$/.test(b)?b.slice(0,-1)+"ing":b+"ing";
+const s3=b=>/(s|x|ch|sh|o)$/.test(b)?b+"es":/[^aeiou]y$/.test(b)?b.slice(0,-1)+"ies":b+"s";
+const regOf=v=>v.b==="be"?"was":v.b.endsWith("e")?v.b+"d":v.b+"ed";
+const forms=v=>v.b==="be"?{pres:"are",past:"were",pp:"been"}:{pres:v.b,past:v.p,pp:v.pp};
+const deja=s=>s.replace(/^(se sont|sont|ont) /,"$1 déjà ");
+const plusque=s=>s.replace(/^se sont /,"s'étaient ").replace(/^sont /,"étaient ").replace(/^ont /,"avaient ");
+const jamais=s=>s.replace(/^se sont /,"ne se sont jamais ").replace(/^sont /,"ne sont jamais ").replace(/^ont /,"n'ont jamais ");
+function mk4(correct,pool,valid){const w=shuffle([...new Set(pool)].filter(x=>!valid.includes(x)&&x!==correct)).slice(0,3);const opts=shuffle([correct,...w]);return{opts,ci:opts.indexOf(correct)}}
+function okForm(inp,v,which){const x=String(inp||"").trim().toLowerCase();if(!x)return false;const base=(which==="p"?v.p:v.pp).split("/");const alt=(which==="p"?ALTP:ALTPP)[v.b]||[];return [...base,...alt].includes(x)}
+const verbOf=b=>V.find(v=>v.b===b);
+
+/* ============ GÉNÉRATION DES QUESTIONS ============ */
+function mkQ(v,t){
+  const f=forms(v),R=regOf(v),I=ing(v.b),S3=s3(v.b),F3=`${v.b} → ${v.p} → ${v.pp}`;
+  const pool=v.b==="be"?["are","was","were","been","being","is"]:[f.pres,f.past,f.pp,R,I,S3];
+  const aP=ALTP[v.b]||[],aPP=ALTPP[v.b]||[];
+  const q={verb:v.b,type:t};let m;
+  if(t==="pres"){
+    q.label="Complète la phrase";q.prompt=`Every day, they ___ ${v.o}.`;m=mk4(f.pres,pool,[f.pres]);
+    q.fr=`Chaque jour, ils ${v.fp}.`;
+    q.exp=`« Every day » (chaque jour) exprime une habitude → présent simple. Avec « they », le verbe garde sa forme de base : ${f.pres}. (${F3})`;
+  }else if(t==="past"){
+    q.label="Complète la phrase";q.prompt=`Yesterday, they ___ ${v.o}.`;m=mk4(f.past,pool,[f.past,...aP]);
+    q.fr=`Hier, ils ${v.fpa}.`;
+    q.exp=`« Yesterday » (hier) indique une action terminée dans le passé → prétérit (2ᵉ forme) : ${f.past}. ${f.past===v.b?"Ce verbe ne change pas au prétérit. ":""}${(R===f.past||aP.includes(R))?"":`On ne dit pas « ${R} » : le verbe est irrégulier. `}(${F3})`;
+  }else if(t==="pp"){
+    q.label="Complète la phrase";q.prompt=`They have already ___ ${v.o}.`;m=mk4(f.pp,pool,[f.pp,...aPP]);
+    q.fr=`Ils ${deja(v.fpa)}.`;
+    q.exp=`Après « have already » on emploie le participe passé (3ᵉ forme) : ${f.pp}. Le prétérit (${f.past}) ne s'utilise pas après « have ». (${F3})`;
+  }else{
+    const c=`Yesterday, they ${f.past} ${v.o}.`;
+    q.label="Choisis la bonne traduction";q.prompt=`Hier, ils ${v.fpa}.`;
+    m=mk4(c,[`Yesterday, they have ${f.pp} ${v.o}.`,`Yesterday, they ${f.pres} ${v.o}.`,`Yesterday, they ${R} ${v.o}.`,`Yesterday, they ${I} ${v.o}.`,`Yesterday, they will ${v.b} ${v.o}.`],[c,...aP.map(x=>`Yesterday, they ${x} ${v.o}.`)]);
+    q.fr=q.prompt;
+    q.exp=`Avec « yesterday », on utilise le prétérit simple, jamais « have + participe passé » ni la forme de base. Bonne phrase : they ${f.past}. (${F3})`;
+  }
+  q.opts=m.opts;q.ci=m.ci;return q;
+}
+function mkF(v,k){
+  const f=forms(v),R=regOf(v),F3=`${v.b} → ${v.p} → ${v.pp}`;
+  const aPP=ALTPP[v.b]||[];const q={verb:v.b,type:"f"+k};let m;
+  if(k===1){
+    const c=`had already ${f.pp}`;
+    q.label="Complète la phrase (test final)";q.prompt=`By the time the teacher arrived, they ___ ${v.o}.`;
+    m=mk4(c,[`have already ${f.pp}`,`has already ${f.pp}`,`had already ${f.past}`,`already ${f.past}`,`had already ${R}`,`will already ${f.pp}`],[c,...aPP.map(x=>`had already ${x}`)]);
+    q.fr=`Quand le professeur est arrivé, ils ${plusque(deja(v.fpa))}.`;
+    q.exp=`« By the time + prétérit » : l'action s'est passée avant une autre action passée → past perfect : had + participe passé (3ᵉ forme) → had already ${f.pp}. (${F3})`;
+  }else if(k===2){
+    const c=`They have never ${f.pp} ${v.o}.`;
+    q.label="Choisis la phrase correcte (test final)";q.prompt="Quelle phrase est correcte ?";
+    m=mk4(c,[`They have never ${f.past} ${v.o}.`,`They did never ${f.pp} ${v.o}.`,`They are never ${f.pp} ${v.o}.`,`They have never ${R} ${v.o}.`,`They never has ${f.pp} ${v.o}.`],[c,...aPP.map(x=>`They have never ${x} ${v.o}.`)]);
+    q.fr=`Ils ${jamais(v.fpa)}.`;
+    q.exp=`« never » + expérience jusqu'à maintenant → present perfect : have + participe passé (3ᵉ forme) → have never ${f.pp}. (${F3})`;
+  }else{
+    q.typed=true;q.label="Écris les formes (test final)";q.prompt=`« ${v.fr} » — base : ${v.b}`;
+    q.fr=v.fr;q.full=F3;q.exp=`Les 3 formes à connaître : ${F3}.`;return q;
+  }
+  q.opts=m.opts;q.ci=m.ci;return q;
+}
+function dayQs(n){const qs=[];dayVerbs(n).forEach(v=>["pres","past","pp","trans"].forEach(t=>qs.push(mkQ(v,t))));return shuffle(qs)}
+function missCounts(){const m={};for(let n=1;n<=TD;n++)(S.done[n]?.qs||[]).forEach(q=>{if(!q.ok)m[q.verb]=(m[q.verb]||0)+1});return m}
+function finalQs(){const m=missCounts();const sel=V.map(v=>[v,(m[v.b]||0)+Math.random()*.9]).sort((a,b)=>b[1]-a[1]).slice(0,30).map(x=>x[0]);return shuffle(sel).map((v,i)=>mkF(v,i%3+1))}
+
+/* ============ ÉTAT UI ============ */
+let view="list",ch={mode:"home"},histOpen=null;
+function goV(v){view=v;if(v==="challenge"&&ch.mode!=="home"&&ch.mode!=="quiz")ch={mode:"home"};render();window.scrollTo(0,0)}
+function show(o){ch=o;render();window.scrollTo(0,0)}
+function toHome(){view="challenge";show({mode:"home"})}
+function openHist(){view="history";histOpen=null;render();window.scrollTo(0,0)}
+function setHH(){document.documentElement.style.setProperty("--hh",($("#hd").getBoundingClientRect().height-1)+"px")}
+function render(){
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===view));
+  $("#hist").classList.toggle("on",view==="history");
+  if(view==="list")pageList();else if(view==="lesson")pageLesson();else if(view==="challenge")pageChallenge();else pageHistory();
+  setHH();
+}
+
+/* ============ PAGE 1 : LISTE ============ */
+function pageList(){
+  const L=[...new Set(V.map(v=>v.b[0].toUpperCase()))];
+  $("#app").innerHTML=`<section class="hero"><h1>Liste des verbes irréguliers</h1><p class="mut">${V.length} verbes en ordre alphabétique, avec leur sens en français et les 3 formes. Le badge J1, J2… indique le jour du challenge où le verbe est travaillé.</p></section>
+  <input id="q" class="search" type="search" placeholder="Chercher un verbe (anglais ou français)" oninput="rows()">
+  <div class="letters">${L.map(l=>`<a href="#L${l}" onclick="jump('${l}');return false">${l}</a>`).join("")}</div>
+  <div class="tbl"><div class="th"><span>Base</span><span>Prétérit</span><span>Part. passé</span><span>Français</span></div><div id="rows"></div></div>`;
+  rows();
+}
+function rows(){
+  const q=(($("#q")||{}).value||"").trim().toLowerCase();let last="",h="";
+  V.forEach((v,i)=>{
+    if(q&&!(v.b.includes(q)||v.p.includes(q)||v.pp.includes(q)||v.fr.toLowerCase().includes(q)))return;
+    const L=v.b[0].toUpperCase();
+    if(!q&&L!==last){h+=`<div class="lt" id="L${L}">${L}</div>`;last=L}
+    h+=`<div class="tr"><b>${v.b}</b><span>${v.p}</span><span>${v.pp}</span><span class="fr"><span>${v.fr}</span><i>J${Math.floor(i/6)+1}</i></span></div>`;
+  });
+  $("#rows").innerHTML=h||`<p class="empty">Aucun verbe trouvé.</p>`;
+}
+function jump(l){const e=document.getElementById("L"+l);if(e)e.scrollIntoView({behavior:"smooth"})}
+
+/* ============ PAGE 2 : LEÇON ============ */
+function pageLesson(){
+  $("#app").innerHTML=`<section class="hero"><h1>Leçon : comment utiliser les 3 temps</h1><p class="mut">Chaque verbe irrégulier a 3 formes. Savoir laquelle choisir, c'est tout l'enjeu.</p></section>
+  <div class="card"><h2>Les 3 formes</h2>
+    <table class="tbl3"><tr><th>Forme</th><th>Nom anglais</th><th>Exemple</th></tr>
+    <tr><td><b>1. Base</b></td><td>base form</td><td>write</td></tr>
+    <tr><td><b>2. Prétérit</b></td><td>past simple</td><td>wrote</td></tr>
+    <tr><td><b>3. Participe passé</b></td><td>past participle</td><td>written</td></tr></table>
+    <p class="note" style="margin-top:8px">Un verbe régulier ajoute -ed aux formes 2 et 3 (walk – walked – walked). Un verbe irrégulier change autrement : il faut l'apprendre.</p>
+  </div>
+  <div class="card ex"><h2>1. La base : le présent</h2>
+    <p>Pour les habitudes, les vérités générales, et après <b>will, can, must, to, do/does/did</b>.</p>
+    <q>They <b>write</b> every day.</q><q>He <b>writes</b> every day. <span class="mut">(3ᵉ personne : +s)</span></q><q>She can <b>write</b> / Do you <b>write</b>?</q></div>
+  <div class="card ex"><h2>2. Le prétérit : une action terminée</h2>
+    <p>Pour une action finie à un moment précis du passé (<b>yesterday, last week, in 2020, two days ago</b>).</p>
+    <q>I <b>wrote</b> a letter yesterday.</q>
+    <p class="note">Attention : dans une question ou une négation avec <b>did</b>, le verbe revient à la base.</p>
+    <q>Did you <b>write</b>? / I didn't <b>write</b>.</q></div>
+  <div class="card ex"><h2>3. Le participe passé : après have, had, be</h2>
+    <p><b>have / has + participe</b> : lien avec le présent (never, ever, already, yet, just, since, for).</p><q>I have <b>written</b> three letters.</q>
+    <p><b>had + participe</b> : avant une autre action passée.</p><q>She had already <b>left</b> when I arrived.</q>
+    <p><b>be + participe</b> : la voix passive.</p><q>The letter was <b>written</b> by Tom.</q></div>
+  <div class="card"><h2>Astuce : 4 familles de verbes</h2>
+    <table class="tbl3"><tr><th>Modèle</th><th>Exemples</th></tr>
+    <tr><td><b>A – A – A</b></td><td>cut – cut – cut · put – put – put · hit – hit – hit</td></tr>
+    <tr><td><b>A – B – B</b></td><td>buy – bought – bought · find – found – found</td></tr>
+    <tr><td><b>A – B – C</b></td><td>write – wrote – written · go – went – gone</td></tr>
+    <tr><td><b>A – B – A</b></td><td>come – came – come · run – ran – run</td></tr></table></div>
+  <div class="card"><h2>Erreurs fréquentes</h2>
+    <div class="wrong">✗ I have went to Cotonou.</div><div class="right">✓ I have gone to Cotonou.</div>
+    <div class="wrong">✗ She buyed a dress.</div><div class="right">✓ She bought a dress.</div>
+    <div class="wrong">✗ Yesterday I have seen him.</div><div class="right">✓ Yesterday I saw him.</div>
+    <div class="wrong">✗ He didn't went to school.</div><div class="right">✓ He didn't go to school.</div></div>
+  <div class="card good"><h2>Comment fonctionne le challenge</h2>
+    <p>Chaque jour : 6 verbes, 24 questions, une note sur 20, puis 6 phrases à écrire toi-même${LAST<6?` (le dernier jour est plus court : ${LAST} verbe${LAST>1?"s":""})`:""}. Le jour suivant s'ouvre à 6h00. Après les ${TD} jours, tu reçois ton appréciation générale, puis le test final.</p>
+    <button class="btn primary" onclick="goV('challenge')">Aller à Mon Challenge</button></div>`;
+}
+
+/* ============ PAGE 3 : CHALLENGE ============ */
+function unlockTs(n){
+  if(n===1)return 0;
+  if(n===FINAL&&S.done[FINAL])return 0;
+  if(S.unlock[n]!=null)return S.unlock[n];
+  const p=S.done[n-1];return p?nextSix(p.at):null;
+}
+function st(n){
+  if(S.done[n]&&(n<FINAL||S.done[n].passed))return"done";
+  if(n===FINAL&&S.done[FINAL])return"open";
+  const u=unlockTs(n);if(u===null)return"locked";
+  return u<=Date.now()?"open":"wait";
+}
+function pageChallenge(){
+  const m=ch.mode;
+  ({home:chHome,intro:chIntro,quiz:chQuiz,result:chResult,sent:chSent,recap:chRecap,bilan:chBilan})[m]();
+}
+function chHome(){
+  let next=null;for(let n=1;n<=FINAL;n++){if(st(n)!=="done"){next=n;break}}
+  const doneN=Array.from({length:TD},(_,i)=>i+1).filter(n=>S.done[n]).length;
+  const scores=Array.from({length:TD},(_,i)=>S.done[i+1]).filter(Boolean).map(d=>d.score);
+  const avg=scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:null;
+  let action="";
+  if(next){
+    const u=unlockTs(next),now=Date.now(),vs=next===FINAL?"":dayVerbs(next).map(v=>`<span class="chip">${v.b}</span>`).join("");
+    if(u<=now){
+      action=`<div class="card go"><h2>${dayTitle(next)} · disponible</h2>${next===FINAL?"<p>Un test corsé de 30 questions pour valider toute ta maîtrise.</p>":`<p>Les ${dayVerbs(next).length} verbes du jour :</p><p>${vs}</p>`}<button class="btn primary" onclick="startIntro(${next})">${S.done[next]?"Réessayer":"Commencer"}</button></div>`;
+    }else{
+      action=`<div class="card wait"><h2>${dayTitle(next)} · prochain à 6h00</h2><p class="mut">Disponible ${dateFr(u)} à ${timeFr(u)}. Temps restant :</p><div class="cd" data-cd="${u}">${fmtCd(u-now)}</div><button class="btn ghost" onclick="demoUnlock(${next})">⏩ Passer l'attente (démo)</button><p class="note">Le bouton démo sert à tester le prototype sans attendre 6h00.</p></div>`;
+    }
+  }else{
+    action=`<div class="card good"><h2>🎉 Challenge terminé</h2><p>Tu as réussi le test final. Bravo !</p><button class="btn green" onclick="openResult(${FINAL})">Revoir mon test final</button></div>`;
+  }
+  const tiles=Array.from({length:FINAL},(_,i)=>i+1).map(n=>{
+    const s=st(n),d=S.done[n];
+    if(s==="done"||(d&&n===FINAL)){const low=d.score<PASS;return`<button class="tile done ${low?"low":""}" onclick="openResult(${n})"><big>${n===FINAL?"🏁":n}</big>${fmt(d.score)}/20</button>`}
+    if(s==="open")return`<button class="tile open" onclick="startIntro(${n})"><big>${n===FINAL?"🏁":n}</big>Ouvert</button>`;
+    if(s==="wait")return`<button class="tile wait" disabled><big>${n===FINAL?"🏁":n}</big>6h00</button>`;
+    return`<button class="tile" disabled><big>${n===FINAL?"🏁":n}</big>🔒</button>`;
+  }).join("");
+  $("#app").innerHTML=`<section class="hero"><h1>Mon Challenge</h1><p class="mut">24 questions par jour, notées sur 20, sur 6 verbes${LAST<6?` (le dernier jour : ${LAST} verbe${LAST>1?"s":""})`:""}. Le jour suivant s'ouvre à 6h00.</p></section>
+  <div class="card"><div class="qtop"><span>${doneN} / ${TD} jours terminés</span><span>${avg===null?"":"Moyenne "+fmt(avg)+"/20"}</span></div><div class="bar"><i style="width:${doneN/TD*100}%"></i></div></div>
+  ${action}
+  ${S.done[TD]?`<div class="card"><h3>Mon appréciation générale</h3><p class="mut">Ton bilan sur l'ensemble des ${TD} jours.</p><button class="btn" onclick="show({mode:'bilan'})">Voir mon appréciation</button></div>`:""}
+  <div class="grid">${tiles}</div><p class="note" style="margin-top:8px">🏁 = test final. Touche un jour terminé pour revoir sa correction.</p>`;
+}
+function demoUnlock(n){S.unlock[n]=Date.now();save();render()}
+setInterval(()=>{
+  const els=document.querySelectorAll("[data-cd]");
+  for(const e of els){const t=+e.dataset.cd-Date.now();if(t<=0){render();return}e.textContent=fmtCd(t)}
+},1000);
+
+function startIntro(n){show({mode:"intro",n})}
+function chIntro(){
+  const n=ch.n;
+  if(n===FINAL){
+    $("#app").innerHTML=`<button class="back" onclick="toHome()">← Mon Challenge</button><h1>Test final</h1>
+    <div class="card"><p>30 questions corsées, notées sur 20 : past perfect, present perfect et formes à écrire de mémoire. Les verbes que tu as le plus ratés reviennent en priorité.</p><p><b>Il faut au moins ${PASS}/20 pour réussir.</b></p></div>
+    <button class="btn primary full" onclick="startQuiz(${n})">Commencer le test final</button>`;return;
+  }
+  const rows=dayVerbs(n).map(v=>`<div class="tr"><b>${v.b}</b><span>${v.p}</span><span>${v.pp}</span><span class="fr"><span>${v.fr}</span></span></div>`).join("");
+  $("#app").innerHTML=`<button class="back" onclick="toHome()">← Mon Challenge</button><h1>Jour ${n}</h1>
+  <p class="mut">Voici tes ${dayVerbs(n).length} verbes du jour. Prends une minute pour les regarder, puis lance l'exercice (${dayVerbs(n).length*4} questions).</p>
+  <div class="tbl" style="margin-bottom:16px"><div class="th"><span>Base</span><span>Prétérit</span><span>Part. passé</span><span>Français</span></div>${rows}</div>
+  <button class="btn primary full" onclick="startQuiz(${n})">Commencer l'exercice</button>`;
+}
+function startQuiz(n){const qs=n===FINAL?finalQs():dayQs(n);show({mode:"quiz",n,qs,i:0,ans:qs.map(q=>q.typed?["",""]:null)})}
+function promptHtml(q){
+  if(q.type==="trans")return esc(q.prompt);
+  return esc(q.prompt).replace("___",`<span class="blank">_____</span>`);
+}
+function chQuiz(){
+  const {n,qs}=ch;
+  const items=qs.map((q,i)=>{
+    let body;
+    if(q.typed){
+      body=`<div class="prompt">${esc(q.prompt)}</div><div class="two">
+      <label>Prétérit<input id="a${i}_0" type="text" value="${esc(ch.ans[i][0])}" oninput="ch.ans[${i}][0]=this.value;upd()" autocapitalize="off" autocomplete="off" spellcheck="false"></label>
+      <label>Participe passé<input id="a${i}_1" type="text" value="${esc(ch.ans[i][1])}" oninput="ch.ans[${i}][1]=this.value;upd()" autocapitalize="off" autocomplete="off" spellcheck="false"></label></div>`;
+    }else{
+      body=`<div class="prompt">${promptHtml(q)}</div><div class="opts">${q.opts.map((o,k)=>`<button class="opt ${ch.ans[i]===k?"sel":""}" onclick="pick(${i},${k})"><b>${"ABCD"[k]}</b><span>${esc(o)}</span></button>`).join("")}</div>`;
+    }
+    return `<div class="card" id="qq${i}"><div class="qlabel">Question ${i+1}/${qs.length} · ${esc(q.label)}</div>${body}</div>`;
+  }).join("");
+  $("#app").innerHTML=`<div class="qtop"><span>${dayTitle(n)} · ${qs.length} questions</span><button class="back" style="margin:0" onclick="quitQuiz()">Quitter</button></div>
+  <div class="bar b"><i id="pb" style="width:0%"></i></div><p class="mut" id="pc" style="margin:6px 0 12px"></p>
+  ${items}
+  <div class="hint" id="hint"></div>
+  <button class="btn primary full" onclick="nextQ()">Terminer</button>`;
+  upd();
+}
+function isDone(i){const a=ch.ans[i];return ch.qs[i].typed?(a[0].trim()&&a[1].trim()):a!==null}
+function upd(){
+  const t=ch.qs.length;let c=0;for(let i=0;i<t;i++)if(isDone(i))c++;
+  const pb=$("#pb"),pc=$("#pc");if(pb)pb.style.width=(c/t*100)+"%";if(pc)pc.textContent=c+" / "+t+" répondues";
+}
+function pick(i,k){
+  ch.ans[i]=k;
+  document.querySelectorAll("#qq"+i+" .opt").forEach((b,j)=>b.classList.toggle("sel",j===k));
+  upd();
+}
+function quitQuiz(){if(confirm("Quitter l'exercice ? Tes réponses de cet exercice seront perdues."))toHome()}
+function nextQ(){
+  const miss=[];for(let i=0;i<ch.qs.length;i++)if(!isDone(i))miss.push(i);
+  if(miss.length){
+    $("#hint").textContent=miss.length===1?"Il reste la question "+(miss[0]+1)+" à répondre.":"Il reste "+miss.length+" questions à répondre (première : "+(miss[0]+1)+").";
+    const e=document.getElementById("qq"+miss[0]);if(e)e.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+  finish();
+}
+function finish(){
+  const {n,qs,ans}=ch;
+  const rec=qs.map((q,i)=>{
+    const a=ans[i];let ok;
+    if(q.typed){const v=verbOf(q.verb);ok=okForm(a[0],v,"p")&&okForm(a[1],v,"pp")}else ok=a===q.ci;
+    return Object.assign({},q,{ans:a,ok});
+  });
+  const correct=rec.filter(r=>r.ok).length,score=correct/qs.length*20;
+  const d={n,at:Date.now(),total:qs.length,correct,score,qs:rec};
+  if(n===FINAL)d.passed=score>=PASS;
+  if(!(n===FINAL&&S.done[FINAL]&&S.done[FINAL].passed)){S.done[n]=d;save()}
+  show({mode:"result",n});
+}
+function openResult(n){view="challenge";show({mode:"result",n})}
+
+/* ----- correction ----- */
+function fullHtml(q){
+  if(q.typed)return `<b class="g">${esc(q.full)}</b>`;
+  if(q.type==="trans"||q.type==="f2")return `<b class="g">${esc(q.opts[q.ci])}</b>`;
+  return esc(q.prompt).replace("___",`<b class="g">${esc(q.opts[q.ci])}</b>`);
+}
+function yourAns(q){
+  if(q.typed)return esc(q.ans.map(x=>x||"—").join(" / "));
+  return q.ans===null||q.ans===undefined?"—":esc(q.opts[q.ans]);
+}
+function corrHtml(d){
+  return d.qs.map((q,i)=>`<div class="cq ${q.ok?"ok":"ko"}"><div class="cqh"><span class="no">Question ${i+1}</span><span class="mark">${q.ok?"✓ Correct":"✗ Incorrect"}</span></div>
+  <div class="cen">${fullHtml(q)}</div><div class="cfr">🇫🇷 ${esc(q.fr)}</div>
+  ${q.ok?"":`<div class="yours">Ta réponse : ${yourAns(q)}</div><div class="exp">💡 ${esc(q.exp)}</div>`}</div>`).join("");
+}
+function confetti(){const c=["#ffffff","#bbf7d0","#dbeafe","#86efac","#93c5fd"];return Array.from({length:40},(_,i)=>`<i style="left:${Math.random()*100}%;animation-delay:${(Math.random()*3).toFixed(2)}s;background:${c[i%c.length]}"></i>`).join("")}
+function chResult(){
+  const n=ch.n,d=S.done[n];
+  if(!d){toHome();return}
+  const c=col(d.score);
+  const msg=d.score>=18?"Excellent travail !":d.score>=PASS?"Bien joué, continue comme ça.":"Pas de panique : relis les corrections en rouge ci-dessous, c'est comme ça qu'on retient.";
+  let top="";
+  if(n===FINAL&&d.passed){
+    top=`<div class="cf">${confetti()}<h2>Bravoooo ! 🎉</h2><p><b>Félicitations !</b></p><p>Tu as terminé les ${TD} jours du challenge et réussi le test final avec ${fmt(d.score)}/20. Les ${V.length} verbes irréguliers n'ont plus de secret pour toi. Continue à les employer à l'oral et à l'écrit : c'est comme ça qu'ils restent en mémoire pour toujours.</p></div>`;
+  }
+  let btns="";
+  if(n<FINAL)btns=`<button class="btn primary" onclick="${d.sent?`show({mode:'recap',n:${n}})`:`startSent(${n})`}">${d.sent?"Voir mes phrases":"Mes phrases du jour"}</button>`;
+  if(n===FINAL&&!d.passed)btns=`<button class="btn primary" onclick="startQuiz(${FINAL})">Réessayer le test final</button>`;
+  if(n===TD)btns+=`<button class="btn" onclick="show({mode:'bilan'})">Mon appréciation générale</button>`;
+  btns+=`<button class="btn ghost" onclick="toHome()">Retour au challenge</button>`;
+  $("#app").innerHTML=`<button class="back" onclick="toHome()">← Mon Challenge</button>${top}
+  <div class="card ${c==="red"?"bad":"good"} score ${c}"><div class="mut" style="font-weight:800">${dayTitle(n)} · ${dateFr(d.at)}</div><div class="n">${fmt(d.score)}<small>/20</small></div><p style="margin:8px 0 0;font-weight:700">${d.correct} bonnes réponses sur ${d.total}</p><p class="mut" style="margin:4px 0 0">${n===FINAL?(d.passed?"Test réussi (≥ "+PASS+"/20)":"Test non réussi : il faut au moins "+PASS+"/20. "+msg):msg}</p></div>
+  <div>${btns}</div>
+  <h2 style="margin-top:14px">Correction</h2>${corrHtml(d)}
+  <div>${btns}</div>`;
+}
+
+/* ----- 6 phrases du jour ----- */
+function startSent(n){const d=S.done[n];show({mode:"sent",n,sent:(d.sent||dayVerbs(n).map(()=>"")).slice(),err:[]})}
+function hasForm(sent,v){
+  const set=new Set(v.b==="be"?["be","am","is","are","was","were","been","being"]:[v.b,...v.p.split("/"),...v.pp.split("/"),...(ALTP[v.b]||[]),...(ALTPP[v.b]||[]),s3(v.b),ing(v.b),v.b+v.b.slice(-1)+"ing"]);
+  return (sent.toLowerCase().match(/[a-zàâçéèêëîïôûùüÿ']+/g)||[]).some(w=>set.has(w));
+}
+function chSent(){
+  const n=ch.n,vs=dayVerbs(n);
+  $("#app").innerHTML=`<button class="back" onclick="openResult(${n})">← Ma correction</button><h1>Mes ${vs.length} phrases du jour</h1>
+  <p class="mut">Écris une phrase en anglais avec chacun des ${vs.length} verbes du jour. Utilise la forme de ton choix (base, prétérit ou participe passé).</p>
+  <div class="sent">${vs.map((v,k)=>`<div style="margin-bottom:14px"><label><div class="vv">${k+1}. ${v.b} – ${v.p} – ${v.pp} <span class="mut">(${v.fr})</span></div>
+  <textarea oninput="ch.sent[${k}]=this.value" placeholder="Écris ta phrase en anglais" autocapitalize="sentences" spellcheck="false">${esc(ch.sent[k])}</textarea></label>${ch.err[k]?`<div class="err">${esc(ch.err[k])}</div>`:""}</div>`).join("")}</div>
+  <button class="btn green full" onclick="validSent()">Valider mes ${vs.length} phrases</button>`;
+}
+function validSent(){
+  const n=ch.n,vs=dayVerbs(n);ch.err=vs.map((v,k)=>{
+    const s=(ch.sent[k]||"").trim();
+    if(!s)return"Écris une phrase pour ce verbe.";
+    if(s.split(/\s+/).length<3)return"Fais une phrase d'au moins 3 mots.";
+    if(!hasForm(s,v))return`Utilise une forme de « ${v.b} » (${v.b}, ${v.p}, ${v.pp}) dans ta phrase.`;
+    return"";
+  });
+  if(ch.err.some(Boolean)){render();const e=document.querySelector(".err");if(e)e.scrollIntoView({block:"center"});return}
+  S.done[n].sent=ch.sent.map(s=>s.trim());S.done[n].sentAt=Date.now();save();
+  show({mode:"recap",n});
+}
+function hl(s,v){
+  const set=v.b==="be"?["be","am","is","are","was","were","been","being"]:[v.b,...v.p.split("/"),...v.pp.split("/"),...(ALTP[v.b]||[]),...(ALTPP[v.b]||[]),s3(v.b),ing(v.b),v.b+v.b.slice(-1)+"ing"];
+  return esc(s).replace(/[A-Za-zÀ-ÿ']+/g,w=>set.includes(w.toLowerCase())?`<mark>${w}</mark>`:w);
+}
+function chRecap(){
+  const n=ch.n,d=S.done[n],vs=dayVerbs(n),c=col(d.score);
+  $("#app").innerHTML=`<div class="card good cenb"><h2 style="margin:0">✅ Validé !</h2><p style="margin:4px 0 0">Tes ${vs.length} phrase${vs.length>1?"s sont enregistrées":" est enregistrée"}. Tu peux maintenant faire une capture d'écran de la carte ci-dessous.</p></div>
+  <div class="recap"><div class="rh"><span class="logo">MV</span><div><div class="bt">Maîtrise Verbes Irréguliers</div><div class="mut" style="font-size:14px">${dayTitle(n)} · ${dateFr(d.sentAt||d.at)}</div></div></div>
+  <p>Note du jour : <span class="badge ${c}">${fmt(d.score)}/20</span></p>
+  ${vs.map((v,k)=>`<div class="rs"><b>${v.b}</b> – ${v.p} – ${v.pp}<br>${hl(d.sent[k],v)}</div>`).join("")}</div>
+  <div style="margin-top:12px"><button class="btn primary" onclick="toHome()">Retour au challenge</button><button class="btn ghost" onclick="startSent(${n})">Modifier mes phrases</button></div>`;
+}
+
+/* ----- appréciation générale ----- */
+function stats(){
+  const recs=[];for(let n=1;n<=TD;n++)if(S.done[n])recs.push(S.done[n]);
+  const avg=recs.reduce((a,r)=>a+r.score,0)/(recs.length||1);
+  const bt={pres:[0,0],past:[0,0],pp:[0,0],trans:[0,0]},miss={};
+  recs.forEach(r=>r.qs.forEach(q=>{if(bt[q.type]){bt[q.type][1]++;if(!q.ok)bt[q.type][0]++}if(!q.ok)miss[q.verb]=(miss[q.verb]||0)+1}));
+  return{recs,avg,bt,miss};
+}
+function appreciation(){
+  const s=stats(),N={pres:"le présent (forme de base)",past:"le prétérit",pp:"le participe passé",trans:"la compréhension des phrases"};
+  const r=Object.entries(s.bt).map(([k,[e,t]])=>[k,t?e/t:0,e]).sort((a,b)=>b[1]-a[1]);
+  const total=r.reduce((a,x)=>a+x[2],0);
+  const top=Object.entries(s.miss).sort((a,b)=>b[1]-a[1]).slice(0,6).map(x=>x[0]);
+  const lvl=s.avg>=18?"Excellent niveau":s.avg>=PASS?"Très bon niveau":s.avg>=12?"Bon niveau, à consolider":"Niveau encore fragile, à retravailler";
+  const k=Math.min(5,s.recs.length),f5=s.recs.slice(0,k).reduce((a,x)=>a+x.score,0)/Math.max(1,k),l5=s.recs.slice(-k).reduce((a,x)=>a+x.score,0)/Math.max(1,k);
+  const P=[`${lvl} : ta moyenne est de ${fmt(s.avg)}/20 sur ${s.recs.length} jours, avec ${total} erreur${total>1?"s":""} au total.`];
+  if(total>0)P.push(`Ton point le plus fragile est ${N[r[0][0]]} (${r[0][2]} erreur${r[0][2]>1?"s":""}). Ton point le plus solide est ${N[r[r.length-1][0]]}.`);
+  else P.push("Aucune erreur sur l'ensemble du challenge : parcours parfait.");
+  if(top.length)P.push(`Verbes à revoir en priorité : ${top.join(", ")}. Ils reviendront en force dans le test final.`);
+  P.push(l5>f5+1?"Tu as nettement progressé au fil des jours : la régularité paie.":l5<f5-1?"Tes notes ont un peu baissé vers la fin : relis la liste complète avant le test final.":"Tes résultats sont réguliers d'un jour à l'autre.");
+  P.push("Prochaine étape : le test final corsé. Il faut au moins "+PASS+"/20 pour le réussir.");
+  return{P,s,r,N,top};
+}
+function chBilan(){
+  const a=appreciation(),s=a.s,u=unlockTs(FINAL),fs=st(FINAL);
+  let go="";
+  if(fs==="done")go=`<button class="btn green" onclick="openResult(${FINAL})">Revoir mon test final</button>`;
+  else if(u!==null&&u<=Date.now())go=`<button class="btn primary" onclick="startIntro(${FINAL})">Passer au test final</button>`;
+  else go=`<p class="mut">Test final disponible ${u?dateFr(u)+" à "+timeFr(u):""}</p><div class="cd" data-cd="${u}">${fmtCd(u-Date.now())}</div><button class="btn ghost" onclick="demoUnlock(${FINAL})">⏩ Passer l'attente (démo)</button>`;
+  $("#app").innerHTML=`<button class="back" onclick="toHome()">← Mon Challenge</button><h1>Mon appréciation générale</h1>
+  <div class="card score ${col(s.avg)}"><div class="mut" style="font-weight:800">Moyenne sur ${s.recs.length} jours</div><div class="n">${fmt(s.avg)}<small>/20</small></div></div>
+  <div class="card">${a.P.map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+  <div class="card"><h3>Erreurs par type de question</h3><div class="pbars">${a.r.map(([k,rate,e])=>{const t=s.bt[k][1];return`<div><div class="row"><span>${esc(a.N[k])}</span><span>${e} / ${t}</span></div><div class="bar ${rate>0.25?"r":""}"><i style="width:${Math.max(3,100-rate*100)}%"></i></div></div>`}).join("")}</div><p class="note">La barre indique ton taux de réussite.</p></div>
+  <div>${go}</div>`;
+}
+
+/* ============ HISTORIQUE ============ */
+function pageHistory(){
+  if(histOpen){
+    const n=histOpen,d=S.done[n],vs=n===FINAL?[]:dayVerbs(n),c=col(d.score);
+    $("#app").innerHTML=`<button class="back" onclick="histOpen=null;render()">← Historique</button>
+    <h1>${dayTitle(n)}</h1><p class="mut">${dateFr(d.at)} à ${timeFr(d.at)} · <span class="badge ${c}">${fmt(d.score)}/20</span></p>
+    ${vs.length?`<div class="tbl" style="margin-bottom:14px"><div class="th"><span>Base</span><span>Prétérit</span><span>Part. passé</span><span>Français</span></div>${vs.map(v=>`<div class="tr"><b>${v.b}</b><span>${v.p}</span><span>${v.pp}</span><span class="fr"><span>${v.fr}</span></span></div>`).join("")}</div>`:""}
+    ${d.sent?`<div class="recap" style="margin-bottom:14px"><h3>Mes phrases</h3>${vs.map((v,k)=>`<div class="rs"><b>${v.b}</b><br>${hl(d.sent[k],v)}</div>`).join("")}</div>`:(n<FINAL?`<button class="btn primary" onclick="view='challenge';startSent(${n})">Écrire mes phrases</button>`:"")}
+    <h2>Correction</h2>${corrHtml(d)}`;
+    return;
+  }
+  const ns=Object.keys(S.done).map(Number).sort((a,b)=>b-a);
+  $("#app").innerHTML=`<section class="hero"><h1>Historique</h1><p class="mut">Tous les jours déjà effectués, avec leur contenu. Touche un jour pour le revoir.</p></section>
+  ${ns.length?ns.map(n=>{const d=S.done[n],c=col(d.score);return`<button class="hist" onclick="histOpen=${n};render();window.scrollTo(0,0)"><div class="t"><span>${dayTitle(n)}</span><span class="badge ${c}">${fmt(d.score)}/20</span></div><div class="mut" style="font-size:14px;margin:2px 0 6px">${dateFr(d.at)} · ${timeFr(d.at)}${d.sent?" · phrases validées ✓":""}</div>${n===FINAL?'<span class="chip">Test final</span>':dayVerbs(n).map(v=>`<span class="chip">${v.b}</span>`).join("")}</button>`}).join(""):`<div class="card cenb"><p class="mut">Aucun jour effectué pour l'instant. Commence le Jour 1 dans « Mon Challenge ».</p><button class="btn primary" onclick="goV('challenge')">Aller au challenge</button></div>`}`;
+}
+
+window.addEventListener("resize",setHH);
+if(window.ResizeObserver)new ResizeObserver(setHH).observe($("#hd"));
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(setHH);
+render();
+</script>
+</body>
+</html>
